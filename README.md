@@ -2,6 +2,12 @@
 
 > 用于监控应用程序窗口句柄的变化
 
+# 安装
+
+```bash
+pnpm install active-win-app
+```
+
 # 基本使用
 
 ```ts
