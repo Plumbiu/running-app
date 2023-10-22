@@ -1,5 +1,5 @@
 {
-  "name": "acitve-win-app",
+  "name": "running-app",
   "version": "0.0.1",
   "description": "get the metadata of the active windows application",
   "main": "dist/index.js",

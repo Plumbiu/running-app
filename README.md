@@ -1,17 +1,17 @@
-# doudo
+# running-app
 
 > 用于监控应用程序窗口句柄的变化
 
 # 安装
 
 ```bash
-pnpm install active-win-app
+pnpm install running-app
 ```
 
 # 基本使用
 
 ```ts
-import { createRules, watchWin } from 'doudo'
+import { createRules, watchWin } from 'running-app'
 
 const rules = createRules([
   {
@@ -78,7 +78,7 @@ const rules = createRules([
 ])
 ```
 
-> 注意，`pattern` 中的字段指的不是“应用名称”，而是"映像名称"，你可以在 cmd 命令中输入 `tasklist` 获取所有的"映像名称"，`doudo` 会去掉结尾的 `.exe` 字符串，也可以通过 `watchWin` 的 debug 选项确认
+> 注意，`pattern` 中的字段指的不是“应用名称”，而是"映像名称"，你可以在 cmd 命令中输入 `tasklist` 获取所有的"映像名称"，`running-app` 会去掉结尾的 `.exe` 字符串，也可以通过 `watchWin` 的 debug 选项确认
 
 关于更多属性，请查看 [rules-规则](#rules-规则)
 
@@ -98,7 +98,7 @@ watchWin(rules, (err, doing) => {}, {
 
 ## hideTitle
 
-默认情况下，`doudo` 的打印结果会包括窗口标题，如果你不希望展示自己的标题，你可以加上 `hideTitle: true`：
+默认情况下，`running-app` 的打印结果会包括窗口标题，如果你不希望展示自己的标题，你可以加上 `hideTitle: true`：
 
 ```ts
 const rules = createRules([
