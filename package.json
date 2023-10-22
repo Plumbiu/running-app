@@ -1,0 +1,61 @@
+{
+  "name": "acitve-win-app",
+  "version": "0.0.1",
+  "description": "get the metadata of the active windows application",
+  "main": "dist/index.js",
+  "type": "module",
+  "author": "Plubiu",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "ts-node --esm src/index.ts",
+    "build": "tsup"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Plumbiu/acitve-win-app"
+  },
+  "keywords": [
+    "nodejs",
+    "monitor",
+    "system",
+    "win",
+    "winapi",
+    "windows",
+    "app",
+    "application",
+    "active",
+    "title",
+    "program",
+    "watch"
+  ],
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "dependencies": {
+    "hmc-win32": "^1.3.7",
+    "picocolors": "^1.0.0"
+  },
+  "devDependencies": {
+    "@plumbiu/eslint-config": "^0.0.9",
+    "eslint": "^8.51.0",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@plumbiu"
+    ]
+  }
+}
